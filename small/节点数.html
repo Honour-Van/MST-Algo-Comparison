@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>最小生成树算法对比_bynode</title>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+
+    
+</head>
+<body>
+    <style>.box { justify-content:center; display:flex; flex-wrap:wrap;  }; </style>
+    <div class="box">
+                <div id="fb0ad8e004be4547ae844861d3ac58e4" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_fb0ad8e004be4547ae844861d3ac58e4 = echarts.init(
+            document.getElementById('fb0ad8e004be4547ae844861d3ac58e4'), 'white', {renderer: 'canvas'});
+        var option_fb0ad8e004be4547ae844861d3ac58e4 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "bar",
+            "name": "kruskal equalEdge",
+            "legendHoverLink": true,
+            "data": [
+                1.616478e-05,
+                2.77996e-05,
+                6.937981e-05,
+                6.461143e-05,
+                0.0001183272,
+                0.0001452923,
+                0.0001683474,
+                0.0002066135,
+                0.0002542734,
+                0.0002865076,
+                0.0002422333,
+                0.0003135204,
+                0.0003932237,
+                0.0004209042,
+                0.0004901886,
+                0.0002754211,
+                0.0004877329,
+                0.0004033804,
+                0.0005800009,
+                0.0005421638
+            ],
+            "showBackground": false,
+            "barMinHeight": 0,
+            "barCategoryGap": "20%",
+            "barGap": "30%",
+            "large": false,
+            "largeThreshold": 400,
+            "seriesLayoutBy": "column",
+            "datasetIndex": 0,
+            "clip": true,
+            "zlevel": 0,
+            "z": 2,
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        },
+        {
+            "type": "bar",
+            "name": "prim equalEdge",
+            "legendHoverLink": true,
+            "data": [
+                4.336834e-05,
+                0.0001738787,
+                0.0005462646,
+                0.0006922961,
+                0.001407147,
+                0.001995301,
+                0.00167582,
+                0.003582334,
+                0.003046632,
+                0.00577569,
+                0.006295061,
+                0.007911992,
+                0.00795703,
+                0.009914779,
+                0.01042035,
+                0.01105862,
+                0.01138735,
+                0.01564,
+                0.01542277,
+                0.01898322
+            ],
+            "showBackground": false,
+            "barMinHeight": 0,
+            "barCategoryGap": "20%",
+            "barGap": "30%",
+            "large": false,
+            "largeThreshold": 400,
+            "seriesLayoutBy": "column",
+            "datasetIndex": 0,
+            "clip": true,
+            "zlevel": 0,
+            "z": 2,
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        },
+        {
+            "type": "bar",
+            "name": "kruskal permutationEdge",
+            "legendHoverLink": true,
+            "data": [
+                1.618862e-05,
+                6.489754e-05,
+                7.498264e-05,
+                0.0001555205,
+                0.0001641989,
+                0.0001917839,
+                0.000277257,
+                0.0003363848,
+                0.0002227068,
+                0.0003725529,
+                0.0004194975,
+                0.0005709887,
+                0.0005435228,
+                0.0004511833,
+                0.0003681898,
+                0.0007153988,
+                0.0007442474,
+                0.000884366,
+                0.0005028009,
+                0.0005527735
+            ],
+            "showBackground": false,
+            "barMinHeight": 0,
+            "barCategoryGap": "20%",
+            "barGap": "30%",
+            "large": false,
+            "largeThreshold": 400,
+            "seriesLayoutBy": "column",
+            "datasetIndex": 0,
+            "clip": true,
+            "zlevel": 0,
+            "z": 2,
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        },
+        {
+            "type": "bar",
+            "name": "prim permutationEdge",
+            "legendHoverLink": true,
+            "data": [
+                4.668236e-05,
+                0.0003418684,
+                0.0009018659,
+                0.001718783,
+                0.002562523,
+                0.003275991,
+                0.004968667,
+                0.005637979,
+                0.005213618,
+                0.00989399,
+                0.01179779,
+                0.01335862,
+                0.01730666,
+                0.0162133,
+                0.01928198,
+                0.02049444,
+                0.02404592,
+                0.03136592,
+                0.03075302,
+                0.03750372
+            ],
+            "showBackground": false,
+            "barMinHeight": 0,
+            "barCategoryGap": "20%",
+            "barGap": "30%",
+            "large": false,
+            "largeThreshold": 400,
+            "seriesLayoutBy": "column",
+            "datasetIndex": 0,
+            "clip": true,
+            "zlevel": 0,
+            "z": 2,
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        },
+        {
+            "type": "bar",
+            "name": "kruskal randomEdge",
+            "legendHoverLink": true,
+            "data": [
+                2.15292e-05,
+                6.23703e-05,
+                0.000107193,
+                0.0001062393,
+                0.0001446962,
+                0.0001429319,
+                0.0002597094,
+                0.0003293991,
+                0.0002521753,
+                0.0004028559,
+                0.0003661871,
+                0.000284648,
+                0.0004590273,
+                0.0005950928,
+                0.0004469156,
+                0.0007903099,
+                0.0005841971,
+                0.00086205,
+                0.0005051852,
+                0.0006273985
+            ],
+            "showBackground": false,
+            "barMinHeight": 0,
+            "barCategoryGap": "20%",
+            "barGap": "30%",
+            "large": false,
+            "largeThreshold": 400,
+            "seriesLayoutBy": "column",
+            "datasetIndex": 0,
+            "clip": true,
+            "zlevel": 0,
+            "z": 2,
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        },
+        {
+            "type": "bar",
+            "name": "prim randomEdge",
+            "legendHoverLink": true,
+            "data": [
+                5.669594e-05,
+                0.0001772404,
+                0.0008443117,
+                0.001189756,
+                0.00197742,
+                0.001871681,
+                0.004877377,
+                0.006024671,
+                0.006770015,
+                0.008863116,
+                0.0103678,
+                0.01298702,
+                0.01444092,
+                0.01815307,
+                0.0189785,
+                0.02394724,
+                0.02252998,
+                0.03263302,
+                0.02502971,
+                0.03847387
+            ],
+            "showBackground": false,
+            "barMinHeight": 0,
+            "barCategoryGap": "20%",
+            "barGap": "30%",
+            "large": false,
+            "largeThreshold": 400,
+            "seriesLayoutBy": "column",
+            "datasetIndex": 0,
+            "clip": true,
+            "zlevel": 0,
+            "z": 2,
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "kruskal equalEdge",
+                "prim equalEdge",
+                "kruskal permutationEdge",
+                "prim permutationEdge",
+                "kruskal randomEdge",
+                "prim randomEdge"
+            ],
+            "selected": {
+                "kruskal equalEdge": true,
+                "prim equalEdge": true,
+                "kruskal permutationEdge": true,
+                "prim permutationEdge": true,
+                "kruskal randomEdge": true,
+                "prim randomEdge": true
+            },
+            "show": true,
+            "top": "bottom",
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "axis",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    },
+    "xAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            },
+            "data": [
+                100,
+                200,
+                300,
+                400,
+                500,
+                600,
+                700,
+                800,
+                900,
+                1000,
+                1100,
+                1200,
+                1300,
+                1400,
+                1500,
+                1600,
+                1700,
+                1800,
+                1900,
+                2000
+            ]
+        }
+    ],
+    "yAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        }
+    ],
+    "title": [
+        {
+            "text": "\u6700\u5c0f\u751f\u6210\u6811\u7b97\u6cd5\u5bf9\u6bd4",
+            "subtext": "\u5ea6\u6570\u4e3a0",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ],
+    "toolbox": {
+        "show": true,
+        "orient": "horizontal",
+        "itemSize": 15,
+        "itemGap": 10,
+        "left": "80%",
+        "feature": {
+            "saveAsImage": {
+                "type": "png",
+                "backgroundColor": "auto",
+                "connectedBackgroundColor": "#fff",
+                "show": true,
+                "title": "\u4fdd\u5b58\u4e3a\u56fe\u7247",
+                "pixelRatio": 1
+            },
+            "restore": {
+                "show": true,
+                "title": "\u8fd8\u539f"
+            },
+            "dataView": {
+                "show": true,
+                "title": "\u6570\u636e\u89c6\u56fe",
+                "readOnly": false,
+                "lang": [
+                    "\u6570\u636e\u89c6\u56fe",
+                    "\u5173\u95ed",
+                    "\u5237\u65b0"
+                ],
+                "backgroundColor": "#fff",
+                "textareaColor": "#fff",
+                "textareaBorderColor": "#333",
+                "textColor": "#000",
+                "buttonColor": "#c23531",
+                "buttonTextColor": "#fff"
+            },
+            "dataZoom": {
+                "show": true,
+                "title": {
+                    "zoom": "\u533a\u57df\u7f29\u653e",
+                    "back": "\u533a\u57df\u7f29\u653e\u8fd8\u539f"
+                },
+                "icon": {},
+                "xAxisIndex": false,
+                "yAxisIndex": false,
+                "filterMode": "filter"
+            },
+            "magicType": {
+                "show": true,
+                "type": [
+                    "line",
+                    "bar",
+                    "stack",
+                    "tiled"
+                ],
+                "title": {
+                    "line": "\u5207\u6362\u4e3a\u6298\u7ebf\u56fe",
+                    "bar": "\u5207\u6362\u4e3a\u67f1\u72b6\u56fe",
+                    "stack": "\u5207\u6362\u4e3a\u5806\u53e0",
+                    "tiled": "\u5207\u6362\u4e3a\u5e73\u94fa"
+                },
+                "icon": {}
+            },
+            "brush": {
+                "icon": {},
+                "title": {
+                    "rect": "\u77e9\u5f62\u9009\u62e9",
+                    "polygon": "\u5708\u9009",
+                    "lineX": "\u6a2a\u5411\u9009\u62e9",
+                    "lineY": "\u7eb5\u5411\u9009\u62e9",
+                    "keep": "\u4fdd\u6301\u9009\u62e9",
+                    "clear": "\u6e05\u9664\u9009\u62e9"
+                }
+            }
+        }
+    }
+};
+        chart_fb0ad8e004be4547ae844861d3ac58e4.setOption(option_fb0ad8e004be4547ae844861d3ac58e4);
+    </script>
+<br/>                <div id="19f24e06c65946319de9af960e5ddaaa" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_19f24e06c65946319de9af960e5ddaaa = echarts.init(
+            document.getElementById('19f24e06c65946319de9af960e5ddaaa'), 'white', {renderer: 'canvas'});
+        var option_19f24e06c65946319de9af960e5ddaaa = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "bar",
+            "name": "kruskal equalEdge",
+            "legendHoverLink": true,
+            "data": [
+                0.0006156921,
+                0.002180314,
+                0.004599667,
+                0.003889203,
+                0.00707283,
+                0.01128418,
+                0.007513833,
+                0.01103902,
+                0.01084197,
+                0.0136395,
+                0.01999295,
+                0.01780796,
+                0.02171183,
+                0.02208843,
+                0.03154702,
+                0.02182293,
+                0.03199742,
+                0.02528035,
+                0.02367618,
+                0.03352888
+            ],
+            "showBackground": false,
+            "barMinHeight": 0,
+            "barCategoryGap": "20%",
+            "barGap": "30%",
+            "large": false,
+            "largeThreshold": 400,
+            "seriesLayoutBy": "column",
+            "datasetIndex": 0,
+            "clip": true,
+            "zlevel": 0,
+            "z": 2,
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        },
+        {
+            "type": "bar",
+            "name": "prim equalEdge",
+            "legendHoverLink": true,
+            "data": [
+                0.0001072645,
+                0.0003412247,
+                0.000739336,
+                0.0009326935,
+                0.001464224,
+                0.0015594,
+                0.001999545,
+                0.003072,
+                0.004630017,
+                0.006326485,
+                0.006607127,
+                0.005964517,
+                0.008383013,
+                0.009678269,
+                0.01172147,
+                0.008930993,
+                0.01354899,
+                0.01355879,
+                0.01482229,
+                0.01752262
+            ],
+            "showBackground": false,
+            "barMinHeight": 0,
+            "barCategoryGap": "20%",
+            "barGap": "30%",
+            "large": false,
+            "largeThreshold": 400,
+            "seriesLayoutBy": "column",
+            "datasetIndex": 0,
+            "clip": true,
+            "zlevel": 0,
+            "z": 2,
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        },
+        {
+            "type": "bar",
+            "name": "kruskal permutationEdge",
+            "legendHoverLink": true,
+            "data": [
+                0.0008310318,
+                0.00264163,
+                0.00711484,
+                0.006289387,
+                0.007074308,
+                0.01237507,
+                0.01197574,
+                0.01620312,
+                0.02475872,
+                0.01938705,
+                0.02383671,
+                0.027176,
+                0.03770869,
+                0.03026052,
+                0.02860673,
+                0.04755924,
+                0.04511433,
+                0.03510287,
+                0.04399893,
+                0.04762702
+            ],
+            "showBackground": false,
+            "barMinHeight": 0,
+            "barCategoryGap": "20%",
+            "barGap": "30%",
+            "large": false,
+            "largeThreshold": 400,
+            "seriesLayoutBy": "column",
+            "datasetIndex": 0,
+            "clip": true,
+            "zlevel": 0,
+            "z": 2,
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        },
+        {
+            "type": "bar",
+            "name": "prim permutationEdge",
+            "legendHoverLink": true,
+            "data": [
+                0.0001284361,
+                0.0004588127,
+                0.001526403,
+                0.001680779,
+                0.001997566,
+                0.002916813,
+                0.003865504,
+                0.007226086,
+                0.00754304,
+                0.0085855,
+                0.01012704,
+                0.01391923,
+                0.01627183,
+                0.01944306,
+                0.01699138,
+                0.01686573,
+                0.02261267,
+                0.02434618,
+                0.02803791,
+                0.03411501
+            ],
+            "showBackground": false,
+            "barMinHeight": 0,
+            "barCategoryGap": "20%",
+            "barGap": "30%",
+            "large": false,
+            "largeThreshold": 400,
+            "seriesLayoutBy": "column",
+            "datasetIndex": 0,
+            "clip": true,
+            "zlevel": 0,
+            "z": 2,
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        },
+        {
+            "type": "bar",
+            "name": "kruskal randomEdge",
+            "legendHoverLink": true,
+            "data": [
+                0.0018574,
+                0.00387373,
+                0.005864429,
+                0.007903408,
+                0.008476567,
+                0.01311479,
+                0.01598789,
+                0.02267525,
+                0.0172621,
+                0.02285483,
+                0.01991012,
+                0.03437443,
+                0.02990053,
+                0.02924833,
+                0.03722136,
+                0.04115496,
+                0.0364527,
+                0.04700122,
+                0.03567419,
+                0.04083674
+            ],
+            "showBackground": false,
+            "barMinHeight": 0,
+            "barCategoryGap": "20%",
+            "barGap": "30%",
+            "large": false,
+            "largeThreshold": 400,
+            "seriesLayoutBy": "column",
+            "datasetIndex": 0,
+            "clip": true,
+            "zlevel": 0,
+            "z": 2,
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        },
+        {
+            "type": "bar",
+            "name": "prim randomEdge",
+            "legendHoverLink": true,
+            "data": [
+                0.0001491785,
+                0.000818634,
+                0.001043367,
+                0.001507521,
+                0.002419114,
+                0.004556632,
+                0.004246282,
+                0.007110596,
+                0.005778337,
+                0.009139204,
+                0.008322859,
+                0.01323161,
+                0.01700323,
+                0.02112439,
+                0.02052305,
+                0.02040336,
+                0.02147658,
+                0.02483306,
+                0.03517241,
+                0.02574072
+            ],
+            "showBackground": false,
+            "barMinHeight": 0,
+            "barCategoryGap": "20%",
+            "barGap": "30%",
+            "large": false,
+            "largeThreshold": 400,
+            "seriesLayoutBy": "column",
+            "datasetIndex": 0,
+            "clip": true,
+            "zlevel": 0,
+            "z": 2,
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "kruskal equalEdge",
+                "prim equalEdge",
+                "kruskal permutationEdge",
+                "prim permutationEdge",
+                "kruskal randomEdge",
+                "prim randomEdge"
+            ],
+            "selected": {
+                "kruskal equalEdge": true,
+                "prim equalEdge": true,
+                "kruskal permutationEdge": true,
+                "prim permutationEdge": true,
+                "kruskal randomEdge": true,
+                "prim randomEdge": true
+            },
+            "show": true,
+            "top": "bottom",
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "axis",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    },
+    "xAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            },
+            "data": [
+                100,
+                200,
+                300,
+                400,
+                500,
+                600,
+                700,
+                800,
+                900,
+                1000,
+                1100,
+                1200,
+                1300,
+                1400,
+                1500,
+                1600,
+                1700,
+                1800,
+                1900,
+                2000
+            ]
+        }
+    ],
+    "yAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        }
+    ],
+    "title": [
+        {
+            "text": "\u6700\u5c0f\u751f\u6210\u6811\u7b97\u6cd5\u5bf9\u6bd4",
+            "subtext": "\u5ea6\u6570\u4e3a64",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ],
+    "toolbox": {
+        "show": true,
+        "orient": "horizontal",
+        "itemSize": 15,
+        "itemGap": 10,
+        "left": "80%",
+        "feature": {
+            "saveAsImage": {
+                "type": "png",
+                "backgroundColor": "auto",
+                "connectedBackgroundColor": "#fff",
+                "show": true,
+                "title": "\u4fdd\u5b58\u4e3a\u56fe\u7247",
+                "pixelRatio": 1
+            },
+            "restore": {
+                "show": true,
+                "title": "\u8fd8\u539f"
+            },
+            "dataView": {
+                "show": true,
+                "title": "\u6570\u636e\u89c6\u56fe",
+                "readOnly": false,
+                "lang": [
+                    "\u6570\u636e\u89c6\u56fe",
+                    "\u5173\u95ed",
+                    "\u5237\u65b0"
+                ],
+                "backgroundColor": "#fff",
+                "textareaColor": "#fff",
+                "textareaBorderColor": "#333",
+                "textColor": "#000",
+                "buttonColor": "#c23531",
+                "buttonTextColor": "#fff"
+            },
+            "dataZoom": {
+                "show": true,
+                "title": {
+                    "zoom": "\u533a\u57df\u7f29\u653e",
+                    "back": "\u533a\u57df\u7f29\u653e\u8fd8\u539f"
+                },
+                "icon": {},
+                "xAxisIndex": false,
+                "yAxisIndex": false,
+                "filterMode": "filter"
+            },
+            "magicType": {
+                "show": true,
+                "type": [
+                    "line",
+                    "bar",
+                    "stack",
+                    "tiled"
+                ],
+                "title": {
+                    "line": "\u5207\u6362\u4e3a\u6298\u7ebf\u56fe",
+                    "bar": "\u5207\u6362\u4e3a\u67f1\u72b6\u56fe",
+                    "stack": "\u5207\u6362\u4e3a\u5806\u53e0",
+                    "tiled": "\u5207\u6362\u4e3a\u5e73\u94fa"
+                },
+                "icon": {}
+            },
+            "brush": {
+                "icon": {},
+                "title": {
+                    "rect": "\u77e9\u5f62\u9009\u62e9",
+                    "polygon": "\u5708\u9009",
+                    "lineX": "\u6a2a\u5411\u9009\u62e9",
+                    "lineY": "\u7eb5\u5411\u9009\u62e9",
+                    "keep": "\u4fdd\u6301\u9009\u62e9",
+                    "clear": "\u6e05\u9664\u9009\u62e9"
+                }
+            }
+        }
+    }
+};
+        chart_19f24e06c65946319de9af960e5ddaaa.setOption(option_19f24e06c65946319de9af960e5ddaaa);
+    </script>
+<br/>    </div>
+    <script>
+    </script>
+</body>
+</html>
